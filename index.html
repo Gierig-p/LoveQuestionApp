@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim amo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+    <style>
+        .gif{
+            margin-top: auto;
+            text-align: center;
+        }
+    
+
+        body{
+            background-color: rgb(255, 255, 255);
+            font-family: 'SUSE', sans-serif;
+            color: darkred;
+        }
+
+            .painel{
+                margin: auto;
+                width: 500px;
+                height: 700px;
+                border-radius: 20px;
+                text-align: center;
+                padding-top: 25px;
+                
+        }
+        h1{ 
+            font-weight: 800;
+            font-size: 50px;
+        }
+        #Sim, #Nao {
+            height: 40px;
+            width: 100px;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(252, 32, 76);
+            color: white;
+            font-family: 'SUSE', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 70px;
+            margin-left: -50px;
+
+
+        }
+
+        #Nao {
+            position: absolute;
+        }
+
+    </style>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('Nao');
+            const painel = document.querySelector('.painel');
+
+            const maxX = painel.clientWidth - button.clientWidth;
+            const maxY = painel.clientHeight - button.clientHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1> Quer Casar comigo?</h1>
+        <img src="https://i.pinimg.com/originals/22/0b/18/220b18ae2e8f2a8e66d1cf729c2c1c8c.gif">
+        <h2> Eu tim amo </h2>
+        <div class="button-container">
+            <button id="Sim" onclick="window.location.href='nova_pagina.html'">Sim!</button>
+            <button id="Nao" onmouseover="moveButton()">Não</button>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

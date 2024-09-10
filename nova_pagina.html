@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim amo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+
+    <style>
+        .gif{
+            margin-top: auto;
+            text-align: center;
+        }
+    
+
+        body{
+            background-color: rgb(255, 255, 255);
+            font-family: 'SUSE', sans-serif;
+            color: darkred;
+        }
+
+            .painel{
+                margin: auto;
+                width: 500px;
+                height: 700px;
+                border-radius: 20px;
+                text-align: center;
+                padding-top: 25px;
+                
+        }
+        h1{ 
+            font-weight: 800;
+            font-size: 50px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1> Agora sou o homem mais feliz</h1>
+        <img src="https://i.pinimg.com/originals/ef/96/87/ef9687b36e36605b375b4e9b0cde51db.gif">
+        <h2> TIM AMO MUITO!! </h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.body; // ou use um seletor como .container
+            const fireworks = new Fireworks(container, { 
+                speed: 2,
+                acceleration: 1.05,
+                friction: 0.98,
+                gravity: 1.5,
+                particles: 150,
+                traceLength: 3,
+                explosion: 5,
+                intensity: 30,
+                flicker: true,
+                brightness: { min: 50, max: 80 },
+                decay: { min: 0.015, max: 0.03 },
+                delay: { min: 30, max: 60 },
+                sound: {
+                    enable: true,
+                    list: ['explosion0.mp3', 'explosion1.mp3', 'explosion2.mp3'],
+                    min: 4,
+                    max: 8,
+                },
+            });
+            fireworks.start();
+        });
+    </script>
+    
+    
+
+</body>
+</html>
